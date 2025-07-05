@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Gastos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Registro de Gastos</h1>
+    <form id="gasto-form">
+        <label>
+            Fecha:
+            <input type="date" id="fecha" required>
+        </label>
+        <label>
+            Categoría:
+            <select id="categoria" required>
+                <option value="Alimentación">Alimentación</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Ocio">Ocio</option>
+                <option value="Otros">Otros</option>
+            </select>
+        </label>
+        <label>
+            Monto:
+            <input type="number" id="monto" min="0" step="0.01" required>
+        </label>
+        <button type="submit">Añadir</button>
+    </form>
+    <h2>Lista de Gastos</h2>
+    <table id="gastos-tabla">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Categoría</th>
+                <th>Monto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Gastos se insertan aquí -->
+        </tbody>
+    </table>
+    <h3>Total: $<span id="total-gastos">0.00</span></h3>
+    <script src="app.js"></script>
+</body>
+</html>
