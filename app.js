@@ -15,7 +15,23 @@ form.addEventListener('submit', function(e) {
     gastos.push({ fecha, categoria, monto });
     actualizarLista();
     form.reset();
+    mostrarMensaje('Gasto agregado correctamente', 'success');
 });
+
+function mostrarMensaje(mensaje, tipo) {
+    let mensajeDiv = document.getElementById('mensaje');
+    if (!mensajeDiv) {
+        mensajeDiv = document.createElement('div');
+        mensajeDiv.id = 'mensaje';
+        form.parentNode.insertBefore(mensajeDiv, form);
+    }
+    mensajeDiv.textContent = mensaje;
+    mensajeDiv.className = tipo === 'success' ? 'mensaje-exito' : 'mensaje-error';
+    setTimeout(() => {
+        mensajeDiv.textContent = '';
+        mensajeDiv.className = '';
+    }, 2000);
+}
 
 function actualizarLista() {
     tablaBody.innerHTML = '';

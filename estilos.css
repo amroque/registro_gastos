@@ -1,0 +1,134 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 40px 40px 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #2d3e50;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+form label {
+    font-weight: 500;
+    color: #34495e;
+    margin-bottom: 4px;
+    display: block;
+}
+
+form input, form select {
+    padding: 8px 12px;
+    border: 1px solid #bfc9d1;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #f8fafb;
+    margin-bottom: 8px;
+    width: 160px;
+}
+
+form button {
+    background: #2d8cf0;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+form button:hover {
+    background: #1766b3;
+}
+
+#mensaje {
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+}
+
+.mensaje-exito {
+    color: #1abc9c;
+}
+
+.mensaje-error {
+    color: #e74c3c;
+}
+
+.tabla-container {
+    overflow-x: auto;
+    margin-bottom: 24px;
+}
+
+#gastos-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin-bottom: 8px;
+}
+
+#gastos-tabla th, #gastos-tabla td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e1e7ed;
+    text-align: left;
+}
+
+#gastos-tabla th {
+    background: #f0f4f8;
+    color: #2d3e50;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#gastos-tabla tr:last-child td {
+    border-bottom: none;
+}
+
+.monto-rojo {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.monto-amarillo {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.monto-verde {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+#total-gastos {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2d8cf0;
+}
+
+.resumen-total {
+    text-align: right;
+    margin-top: 12px;
+    font-size: 1.1rem;
+    color: #34495e;
+}
